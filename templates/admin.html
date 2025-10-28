@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+
+{%block content%}
+
+    {% if username == "Suwannaphum" %}
+        <h1>Hello, ADMIN</h1>
+        <h2>สวัสดี ADMIN: {{ username }}</h2>
+        <img src="../static/โปรเมทศูนย์วิจัย.png" alt="">
+    {% else %}
+        <h1>Hello, USER</h1>
+        <h2>สวัสดี USER: {{ username }}</h2>
+    {% endif %}
+
+
+    {{ myname }}
+    {{ myage }}
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/admin">Admin</a></li>
+    </ul>
+{%endblock%}

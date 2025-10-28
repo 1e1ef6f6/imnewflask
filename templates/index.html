@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{%block content%}
+    <h1>Hello, Index.html</h1>
+    {{ mydata }}
+    <h1>
+        Hello: {{ mydata.name }}
+        Age: {{ mydata.age }}
+    </h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/admin">Admin</a></li>
+    </ul>
+{%endblock%}
