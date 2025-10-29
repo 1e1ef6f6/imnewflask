@@ -6,6 +6,8 @@
         <h1>Hello, ADMIN</h1>
         <h2>สวัสดี ADMIN: {{ username }}</h2>
         <img src="../static/โปรเมทศูนย์วิจัย.png" alt="">
+
+        <a href="{{url_for('static', filename='โปรเมทศูนย์วิจัย.png')}}">URL_FOR img</a>
     {% else %}
         <h1>Hello, USER</h1>
         <h2>สวัสดี USER: {{ username }}</h2>
