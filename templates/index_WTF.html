@@ -8,13 +8,29 @@
             {{form.name.label}}
             {{form.name}}
             <br>
+            <!-- Radio -->
+            {{form.gender.label}}{{form.gender()}}
+            <br>
+            <!-- select Fied -->
+            {{form.select.label}}{{form.select()}}
+            <br>
+            <!-- Boolean Fied -->
+            {{form.isAccept}} {{form.isAccept.label}}
+            <br>
+            {{form.address.label}}{{form.address}}
+            <br>
             {{form.submit}}
+
         </form>
         <hr>
         <h1>ชื่อของคุณ: {{name}}</h1>
 
-        {% if name %}
-            ชื่อของคุณ: <strong>{{name}}</strongs>
+        {% if session["name"] %}
+            ชื่อของคุณ: <strong>{{session["name"]}}</strong><br>
+            เพศ <strong>{{session["gender"]}}</strong><br>
+            ตัวเลือก <strong>{{session["select"]}}</strong><br>
+            ที่อยู่: <strong>{{session["address"]}}</strong><br>
+            ยอมรับหรือไม่? <strong>{{session["isAccept"]}}</strong><br>
         {% else %}
             ไม่พบข้อมูล
         {% endif %}
