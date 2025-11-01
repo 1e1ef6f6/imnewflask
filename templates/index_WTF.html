@@ -5,6 +5,12 @@
 {% block content %}
 
     <div class="container my-2" >
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+        {% endfor %}
         {{wtf.quick_form(form)}}
         <hr>
         <h1>ชื่อของคุณ: {{name}}</h1>
